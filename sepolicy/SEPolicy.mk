@@ -36,8 +36,7 @@ SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += \
 
 # AOSPA-QCOM Specific Required SEPolicy
 ifneq ($(AOSPA_BUILD),)
-    BOARD_VENDOR_SEPOLICY_DIRS += \
-        $(COMMON_SEPOLICY_PATH)/pixel/vendor
     SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
-        $(COMMON_SEPOLICY_PATH)/aospa/private
+        $(COMMON_SEPOLICY_PATH)/aospa/private \
+        $(COMMON_SEPOLICY_PATH)/pixel/private
 endif
