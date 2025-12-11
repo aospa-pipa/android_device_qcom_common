@@ -38,6 +38,7 @@ PRODUCT_PACKAGES += \
     Tag
 
 PRODUCT_SYSTEM_PROPERTIES += \
+    persist.nfc.secure_nfc=true \
     ro.nfc.port=I2C
 
 else
