@@ -5,4 +5,6 @@ allow vendor_location_lowi_server vendor_location_xtwifi_inetagent:unix_dgram_so
 
 hal_client_domain(vendor_location_lowi_server, vendor_hal_qms_qti);
 
-init_daemon_domain(vendor_location_lowi_server)
+# allows loc_launcher to launch lowi-server
+domain_auto_trans(vendor_location, vendor_location_lowi_server_exec, vendor_location_lowi_server)
+allow vendor_location_lowi_server vendor_location:fd use;
