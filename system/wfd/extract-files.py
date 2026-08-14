@@ -16,6 +16,11 @@ namespace_imports = [
 
 blob_fixups: blob_fixups_user_type = {
     (
+        'system_ext/etc/seccomp_policy/wfdservice.policy',
+        'system_ext/etc/seccomp_policy/wfdservice64.policy'
+    ): blob_fixup()
+        .add_line_if_missing('_llseek: 1'),
+    (
         'system_ext/lib/libwfdservice.so',
         'system_ext/lib64/libwfdservice.so',
     ): blob_fixup()
