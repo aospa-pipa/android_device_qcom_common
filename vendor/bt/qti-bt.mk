@@ -10,7 +10,7 @@ PRODUCT_COPY_FILES += \
 
 # Return delay in 1/10ms for <SM8550
 ifneq (,$(filter 4.14 4.19 5.4 5.10, $(TARGET_KERNEL_VERSION)))
-$(call soong_config_set,qssi_bluetooth,enable_delay_in_ms,true)
+$(call soong_config_set_bool,qssi_bluetooth,enable_delay_in_ms,true)
 endif
 
 # Get non-open-source specific aspects.
